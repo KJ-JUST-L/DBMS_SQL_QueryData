@@ -47,17 +47,17 @@ namespace DBMS_SQL_QueryData
             dataGridView1.DataSource = ds.Tables[0];
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void getEmployeeBtn(object sender, EventArgs e)
         {
             showData("SELECT EmployeeID, Title+FirstName+' '+LastName as fullname, [Position] FROM Employees");
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void getCategoryBtn(object sender, EventArgs e)
         {
             showData("SELECT * FROM Categories");
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void getProductBtn(object sender, EventArgs e)
         {
             showData("SELECT * FROM Products");
         }

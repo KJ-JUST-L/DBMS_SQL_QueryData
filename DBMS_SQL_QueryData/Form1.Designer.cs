@@ -39,6 +39,8 @@
             // 
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.AllowUserToDeleteRows = false;
+            dataGridView1.BackgroundColor = Color.White;
+            dataGridView1.BorderStyle = BorderStyle.None;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(12, 60);
             dataGridView1.Name = "dataGridView1";
@@ -54,7 +56,7 @@
             button1.TabIndex = 1;
             button1.Text = "Employees";
             button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            button1.Click += getEmployeeBtn;
             // 
             // button2
             // 
@@ -64,7 +66,7 @@
             button2.TabIndex = 2;
             button2.Text = "Categories";
             button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            button2.Click += getCategoryBtn;
             // 
             // button3
             // 
@@ -74,7 +76,7 @@
             button3.TabIndex = 3;
             button3.Text = "Products";
             button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
+            button3.Click += getProductBtn;
             // 
             // Form1
             // 
