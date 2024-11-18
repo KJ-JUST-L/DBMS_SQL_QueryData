@@ -36,12 +36,11 @@ namespace DBMS_SQL_QueryData
             //DataSet ds = new DataSet();
             //da.Fill(ds);
             //dataGridView1.DataSource = ds.Tables[0];
-            showData();
         }
 
-        private void showData()
+        private void showData(string sql)
         {
-            string sql = "SELECT * FROM Products";
+            //string sql = "SELECT * FROM Products";
             da = new SqlDataAdapter(sql, conn);
             DataSet ds = new DataSet();
             da.Fill(ds);
@@ -50,7 +49,17 @@ namespace DBMS_SQL_QueryData
 
         private void button1_Click(object sender, EventArgs e)
         {
+            showData("SELECT EmployeeID, Title+FirstName+' '+LastName as fullname, [Position] FROM Employees");
+        }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            showData("SELECT * FROM Categories");
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            showData("SELECT * FROM Products");
         }
     }
 }
